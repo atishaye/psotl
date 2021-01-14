@@ -37,8 +37,10 @@ def vigenere_decoder(coded_message, keyword):
             translated_message += coded_message[i]
     return translated_message
 
-message_for_v = "ellie"
-keyword = "lhd"
-
-print(vigenere_coder(message_for_v,keyword))
-print(vigenere_decoder(vigenere_coder(message_for_v, keyword), keyword))
+print("\t\tVIGENERE CIPHER\n\n")
+message_for_v = input("Enter the message to be encoded: ")
+keyword = input("Enter the keyword: ")
+print("Encoded Message: " + vigenere_coder(message_for_v,keyword)+"\n")
+message_for_v = input("Enter the message to be decoded: ")
+keyword = input("Enter the keyword: ")
+print("Decoded Message: " + vigenere_decoder(message_for_v,keyword)+"\n")
